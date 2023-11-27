@@ -1,0 +1,25 @@
+<p>Exercício 4</p>
+
+<form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="nome" placeholder="Nome">
+    <input type="email" [(ngModel)]="email" placeholder="E-mail">
+    <input type="password" [(ngModel)]="senha" placeholder="Senha">
+    <button type="submit">Enviar</button>
+  
+    <p *ngIf="isFormSubmitted && !isFormValid">
+      Preencha todos os campos corretamente!
+    </p>
+  
+    <p *ngIf="nome.length === 0">
+      Nome é obrigatório.
+    </p>
+  
+    <p *ngIf="!email.includes('@')">
+      E-mail deve conter um símbolo @.
+    </p>
+  
+    <p *ngIf="senha.length < 6">
+      Senha deve ter pelo menos 6 caracteres.
+    </p>
+  </form>
+  

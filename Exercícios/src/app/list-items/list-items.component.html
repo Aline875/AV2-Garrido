@@ -1,0 +1,11 @@
+<p>Exercício 2 e 3</p>
+<ul>
+    <li *ngFor="let atividade of atividades; index as i">
+      <span [style.background-color]="atividade['concluída'] ? 'yellow' : 'white'">
+      <button (click)="excluirAtividade(atividade, i)">Excluir</button>
+      <button (click)="concluirAtividade(atividade, i)">Concluir</button>
+    </li>
+  </ul>
+  
+  <button (click)="addAtividade()">Adicionar atividade</button>
+  
