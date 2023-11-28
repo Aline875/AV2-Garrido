@@ -1,4 +1,54 @@
-.atividade-concluída {
-    background-color: yellow;
-  }
-  
+/* Estilos para o parágrafo */
+p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para a lista de atividades */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Estilos para as atividades concluídas */
+li.concluida {
+  background-color: #ffff99; /* Fundo amarelo para atividades concluídas */
+  text-decoration: line-through; /* Adiciona uma linha atravessada para as atividades concluídas */
+}
+
+/* Estilos para os botões Excluir e Concluir */
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para o botão Adicionar atividade */
+button#addAtividade {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+}
+
+button#addAtividade:hover {
+  background-color: #218838;
+}

@@ -6,33 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-items.component.css']
 })
 export class ListItemsComponent implements OnInit {
+  atividades: { texto: string, concluida: boolean }[] = [];
 
-    atividades: string[] = [];
-  
-    constructor() { }
-  
-    ngOnInit() {
-      this.atividades = [
-        "Comprar pão",
-        "Limpar a casa",
-        "Lavar a roupa",
-      ];
-    }
-  
-    addAtividade() {
-      const novaAtividade = prompt('Digite uma nova atividade:');
-      if (novaAtividade !== null && typeof novaAtividade === 'string') {
-        this.atividades.push(novaAtividade);
-      }
-    }
-  
-    excluirAtividade(atividade: string, i: number) {
-      this.atividades.splice(i, 1);
-    }
-  
-    concluirAtividade(atividade: string, i: number) {
-      this.atividades[i] = `${atividade} (concluída)`;
-    }
+  ngOnInit() {
+    this.atividades = [
+      { texto: "Comprar pão", concluida: false },
+      { texto: "Limpar a casa", concluida: false },
+      { texto: "Lavar a roupa", concluida: false },
+    ];
+  }
 
+  addAtividade() {
+    const novaAtividade = prompt('Digite uma nova atividade:');
+    if (novaAtividade !== null && typeof novaAtividade === 'string') {
+      this.atividades.push({ texto: novaAtividade, concluida: false });
+    }
+  }
 
+  excluirAtividade(atividadeIndex: number) {
+    this.atividades.splice(atividadeIndex, 1);
+  }
+
+  concluirAtividade(atividadeIndex: number) {
+    this.atividades[atividadeIndex].concluida = true;
+  }
 }

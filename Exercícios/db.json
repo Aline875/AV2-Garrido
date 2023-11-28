@@ -1,0 +1,16 @@
+[
+  {
+    "matricula": 12345,
+    "nome": "João Silva",
+    "idade": 20,
+    "curso": "Engenharia da Computação",
+    "rendimentoEscolar": {
+      "POO": 8.5,
+      "Front-end": 9.2,
+      "Back-end": 7.8
+    }
+  }
+]
+
+  
+    
