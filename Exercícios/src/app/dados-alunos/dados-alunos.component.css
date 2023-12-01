@@ -1,5 +1,44 @@
+/* Estilos gerais da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o cabeçalho da tabela */
+th {
+  background-color: #007bff; /* Cor do cabeçalho */
+  color: white; /* Cor do texto no cabeçalho */
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Estilos para as células da tabela */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Estilos para linhas alternadas da tabela */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para a lista dentro das células */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para os itens da lista dentro das células */
+li {
+  list-style: none;
+}
+
+
 p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

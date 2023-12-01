@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./componente-pai.component.css']
 })
 export class ComponentePaiComponent {
-
+  itensDoPai: string[] = ['Item 1', 'Item 2', 'Item 3']; 
 }

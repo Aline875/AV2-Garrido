@@ -1,1 +1,26 @@
+
 <p>Exercício 8</p>
+<table>
+  <thead>
+    <tr>
+      <th>Matrícula</th>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Curso</th>
+      <th *ngFor="let disciplina of rendimentoKeys">{{ disciplina }}</th>
+      <th>Média</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of items">
+      <td>{{ aluno.matricula }}</td>
+      <td>{{ aluno.nome }}</td>
+      <td>{{ aluno.idade }}</td>
+      <td>{{ aluno.curso }}</td>
+      <ng-container *ngFor="let disciplina of rendimentoKeys">
+        <td>{{ aluno.rendimentoEscolar[disciplina] }}</td>
+      </ng-container>
+      <td>{{ calcularMediaGlobal(aluno.rendimentoEscolar) }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,14 +1,8 @@
 <p>Exercício 7</p>
-<!-- Formulário de login -->
-<form (submit)="fazerLogin()">
-    <label>Email:</label>
-    <input type="email" [(ngModel)]="email" placeholder="Digite seu email">
-  
-    <label>Senha:</label>
-    <input type="password" [(ngModel)]="senha" placeholder="Digite sua senha">
-  
-    <button type="submit">Fazer login</button>
-  </form>
-  
-  <app-area-logada [logado]="logado" [email]="userEmail"></app-area-logada>
-  
+<!-- form-login.component.html -->
+<div *ngIf="mostrarFormulario">
+  <input type="text" [(ngModel)]="email" placeholder="E-mail">
+  <input type="password" [(ngModel)]="senha" placeholder="Senha">
+  <button (click)="fazerLogin()">Fazer login</button>
+</div>
+<app-area-logada *ngIf="logado" [email]="email"></app-area-logada>
